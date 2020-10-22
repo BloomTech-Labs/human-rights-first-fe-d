@@ -35,6 +35,9 @@
         - enable/disable zooming on the map with mouse scroll wheel 
         - enable/disable fast travel states: turns on a hover option for each screen and zooms onto the highlighted state when clicked 
         - reset map view to the original view
+    - dynamic clustering of points
+    - interactive pop up for single points
+        - additional interaction for Twitter source (Twitter pop up with embeded thread including videos that can play right from the modal itself)
 
 
 
@@ -53,6 +56,7 @@
 - NavBar
 - Filter Form
 - Map
+- Twitter Pop up
 - Graph
 - About
 
@@ -100,3 +104,8 @@
     - setting filters is also an options:  https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setfilter
 - make filter for functional with the Graph
     - add more options to the Graph like filtering by state or zipcode or displaying data based off of date range
+
+> Something to keep in mind: the clustering and display of the points work properly; the data we're using is currently stored on the front-end (re-used from the previous team) and includes duplicates that need to be sorted out -- for proper display of clustering and point display with no overlapping, you can uncomment or paste our other dummy data (unrelated to police brutality)
+```javascript
+data: 'https://docs.mapbox.com/mapbox-gl-js/assets/earthquakes.geojson', // --> sample data 
+```
